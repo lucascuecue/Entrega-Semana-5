@@ -2,19 +2,19 @@ package modelo;
 
 public class Videoteca {
     //Atributos
-    private Pelicula[] coleccion;
+    private Pelicula[] peliculas;
 
     //Métodos
-    public Videoteca (Pelicula[] coleccion){
-        this.coleccion = coleccion;
+    public Videoteca (Pelicula[] peliculas){
+        this.peliculas = peliculas;
     }
 
     //Setters
-    public void setColeccion(Pelicula[] coleccion) {
-        this.coleccion = coleccion;
+    public void setPeliculas(Pelicula[] peliculas) {
+        this.peliculas = peliculas;
     }
     //Getters
-    public Pelicula[] getColeccion() {
-        return coleccion;
+    public Pelicula[] getPeliculas() {
+        return peliculas;
     }
 }

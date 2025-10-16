@@ -23,7 +23,12 @@ public class App {
                 velocidad = Esdia.readFloat("Introduce la velocidad de reproducción (1.0 por defecto): ");
                 break;
             case 3:
-                
+                Director director = new Director(Esdia.readString("Nombre del director: "), Esdia.readString("Apellido del director: "));
+                director.TieneOscar();
+                String titulo = Esdia.readString("Título de la película: ");
+                int year = Esdia.readInt("Año de estreno: ");
+                int duracion = Esdia.readInt("Duración en minutos ");
+                float valoracion = Esdia.readFloat("Valoración del 0.0 al 10.0: ");
                 break;
             case 4:
 
@@ -37,6 +42,7 @@ public class App {
                 break;
         }
     }
+
     //Método para la creación del menú y su impresión por pantalla
     public static void ImpresionMenu (){
         System.out.println("|----------------------------------------------|");
@@ -50,4 +56,8 @@ public class App {
         System.out.println("|----------------------------------------------|");
         System.out.println("");
     } 
+
+    //Método para impresión por pantalla de la videoteca
+    public static void ImpresionVideoteca (Videoteca coleccion){
+    }
 }
