@@ -33,6 +33,14 @@ public class Director {
        }while(!check);
     }
 
+    public String OscarToString (){
+        if (oscar == true){
+            return "Sí";
+        }else{
+            return "No";
+        }
+    }
+
     //Setters
 
     public void setApellidos(String apellidos) {

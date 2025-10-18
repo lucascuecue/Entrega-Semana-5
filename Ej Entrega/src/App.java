@@ -50,7 +50,7 @@ public class App {
 
                 break;
             case 4:
-
+                ImpresionVideoteca(miVideoteca, velocidad);
                 break;
             case 5:
                 System.out.println("Saliendo del sistema...\n");
@@ -78,6 +78,27 @@ public class App {
     } 
 
     //Método para impresión por pantalla de la videoteca
-    public static void ImpresionVideoteca (Videoteca coleccion){
-    }
+    public static void ImpresionVideoteca (Videoteca coleccion, float velocidad){
+        int minTotal = 0;
+        float valTotal = 0.0f;
+        System.out.println("|------------------------------------------------------------------------------------------------------------------------------|");
+        System.out.println("| PELÍCULAS EN LA VIDEOTECA                                                                                                    |");
+        System.out.println("|------------------------------------------------------------------------------------------------------------------------------|");
+        System.out.printf("| %-15s | %-11s | %-20s | %-12s | %-13s | %-23s | %-11s |%n",
+        "Título", "Año Estreno", "Director", "Oscar ganado", "Duración (min)", "Tiempo visionado (min)", "Valoración");
+        System.out.println("|------------------------------------------------------------------------------------------------------------------------------|");
+        for(int i =0; i < coleccion.getTamaño(); i++){
+            System.out.printf("| %-15s | %-11s | %-10s %-9s | %-12s | %-14s | %-23s | %-11s |%n", coleccion.getPeliculas()[i].getTitulo(), 
+            coleccion.getPeliculas()[i].getYear(), coleccion.getPeliculas()[i].getDirector().getNombre(), coleccion.getPeliculas()[i].getDirector().getApellidos(),
+            coleccion.getPeliculas()[i].getDirector().OscarToString(), coleccion.getPeliculas()[i].getDuracion(), 
+            coleccion.getPeliculas()[i].getDuracion()/velocidad, coleccion.getPeliculas()[i].getValoracion());
+            minTotal = minTotal + coleccion.getPeliculas()[i].getDuracion();
+            valTotal = valTotal + coleccion.getPeliculas()[i].getValoracion();
+        }
+        System.out.println("|------------------------------------------------------------------------------------------------------------------------------|");
+        System.out.printf("| Tiempo de visionado total de la videoteca: %40d|%n", minTotal);
+        System.out.printf("|  Valoración total de la videoteca: %48f|%n", valTotal);
+        System.out.println("|------------------------------------------------------------------------------------------------------------------------------|");
+
+    }   
 }
