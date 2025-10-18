@@ -1,8 +1,5 @@
 package modelo;
-
 import java.util.Scanner;
-
-import com.coti.tools.Esdia;
 
 public class Director {
     //Atributos
@@ -19,18 +16,21 @@ public class Director {
     }
 
     public void TieneOscar(){
-        System.out.print("¿Tiene algún óscar? (S/N): ");
+        boolean check = false;
+        do{System.out.print("¿Tiene algún óscar? (S/N): ");
         String resp = scanner.nextLine();
-        do{if(resp.equals("S")){
+        if(resp.equals("S")){
             oscar = true;
+            check = true;
             }
-        if(resp.equals("N")){
+        else if(resp.equals("N")){
             oscar = false;
+            check = true;
             }
-        if(!resp.equals("N") && !resp.equals("S")){
+        else {
             System.out.println("Opción introducida incorrecta. Escoge entre S (Sí) o N (No)");
         }
-       }while(!resp.equals("S") && !resp.equals("N"));
+       }while(!check);
     }
 
     //Setters
