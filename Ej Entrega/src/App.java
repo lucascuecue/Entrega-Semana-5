@@ -97,8 +97,8 @@ public class App {
         }
         System.out.println("|------------------------------------------------------------------------------------------------------------------------------|");
         System.out.printf("| Tiempo de visionado total de la videoteca: %40d|%n", minTotal);
-        System.out.printf("|  Valoración total de la videoteca: %48f|%n", valTotal);
-        System.out.println("|------------------------------------------------------------------------------------------------------------------------------|");
+        System.out.printf("|  Valoración total de la videoteca: %48.2f|%n", valTotal);
+        System.out.println("|------------------------------------------------------------------------------------------------------------------------------|\n\n");
 
     }   
 }
